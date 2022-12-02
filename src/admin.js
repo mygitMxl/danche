@@ -2,19 +2,22 @@ import { Row,Col} from 'antd'
 import Header from './components/Header'/* 如果文件中有index会默认导了index */
 import  Footer  from './components/Footer'
 import React, { Component } from 'react'
-import NavLeft from './components/Navlist'
+import NavLeft from './components/Navleft'
+import Home  from './page/home'
+import './style/common.css'
 export default class admin extends Component {
   render() {
     return (
       <div>
-        <Row>
-          <Col span='3'>
+        <Row className='container'>
+          <Col span='4' className='nav-left'>
              <NavLeft/>
           </Col>
-          <Col span='21'>{/* 两个相加必须等于24 */}
+          <Col span='20' className='main'>{/* 两个span相加必须等于24 */}
             <Header/>
-            <Row>
-              123
+            <Row className='content'>
+               <Home/> 
+              {/* {this.props.children} */}
             </Row>
             <Footer/>
           </Col>

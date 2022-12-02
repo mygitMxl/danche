@@ -1,9 +1,11 @@
-import React, { Component } from 'react'
-
-export default class index extends Component {
-  render() {
-    return (
-      <div>index</div>
-    )
-  }
+import React from 'react'
+import './index.css'
+export default class Footer extends React.Component {
+    render() {
+        return (
+            <div className="footer">
+               版权所有：慕课网&河畔一角（推荐使用谷歌浏览器，可以获得更佳操作页面体验） 技术支持：河畔一角
+            </div>
+        );
+    }
 }
