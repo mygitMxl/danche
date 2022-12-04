@@ -13,6 +13,9 @@ import Messages from './page/ul/messages'
 import Modals from './page/ul/modals'
 import Notice from './page/ul/notice'
 import Tabs from './page/ul/tabs'
+//登录组件
+import FormLogin from './page/form/login'
+import FormRegister from './page/form/register'
 export default class router extends Component {
   render() {
     return (
@@ -23,6 +26,7 @@ export default class router extends Component {
                 return(
                     <Admin>
                     <Switch>{/* 子路由必须有父路由的路径 '/'*/}
+                         {/* ul组件 */}
                         <Route path={'/home'} component={Home}/>
                         <Route path={'/ui/buttons'} component={Buttons}/>
                         <Route path={'/ui/carousel'} component={ Carousel}/>
@@ -32,6 +36,11 @@ export default class router extends Component {
                         <Route path="/ui/modals" component={Modals} />
                         <Route path="/ui/notification" component={Notice} />
                         <Route path="/ui/tabs" component={Tabs} />
+                        {/* ........................................................ */}
+                         {/* 登录组件 */}
+                        <Route path="/form/login" component={FormLogin} />
+                        <Route path="/form/reg" component={FormRegister} />
+                        {/* ......................................................... */}
                         <Route component={ NoMatch}></Route>
                     </Switch>
                     <Redirect to={'/home'}/>
