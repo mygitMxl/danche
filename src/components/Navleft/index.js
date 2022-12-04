@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Menu, Icon } from 'antd';
+import { Menu} from 'antd';
 import './style/index.css'
 import MenuConfig from './../../config/menuConfig'
+import { Link } from 'react-router-dom';
 const { SubMenu } = Menu;
 export default class index extends Component {
   state={
@@ -22,7 +23,7 @@ export default class index extends Component {
       }
       return <Menu.Item title={item.title} key={item.key}>
           {/* <NavLink to={item.key}>{item.title}</NavLink> */}
-        {item.title}
+        <Link to={item.key}>{item.title}</Link>
       </Menu.Item>
   })
   

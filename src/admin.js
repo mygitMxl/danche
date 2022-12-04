@@ -3,7 +3,7 @@ import Header from './components/Header'/* 如果文件中有index会默认导�
 import  Footer  from './components/Footer'
 import React, { Component } from 'react'
 import NavLeft from './components/Navleft'
-import Home  from './page/home'
+
 import './style/common.css'
 export default class admin extends Component {
   render() {
@@ -16,8 +16,8 @@ export default class admin extends Component {
           <Col span='20' className='main'>{/* 两个span相加必须等于24 */}
             <Header/>
             <Row className='content'>
-               <Home/> 
-              {/* {this.props.children} */}
+
+           {this.props.children}
             </Row>
             <Footer/>
           </Col>

@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 
-export default class App extends Component {
+export default class index extends Component {
   render() {
     return (
       <div>
-      {this.props.children}
+        <h1>404</h1>
+        <h3>页面去哪了？</h3>
       </div>
     )
   }
