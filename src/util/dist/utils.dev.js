@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.pagination = exports.formateDate = void 0;
 
 var formateDate = function formateDate(time) {
   if (!time) return '';
@@ -22,5 +22,21 @@ var formateDate = function formateDate(time) {
   return year + '-' + month + '-' + day + ' ' + hour + ':' + Minute + ':' + Second;
 };
 
-var _default = formateDate;
-exports["default"] = _default;
+exports.formateDate = formateDate;
+
+var pagination = function pagination(data, callback) {
+  return {
+    onChange: function onChange(current) {
+      callback(current);
+    },
+    current: data.result.page,
+    pageSize: data.result.page_size,
+    total: data.result.total_count,
+    showTotal: function showTotal() {
+      return "\u5171".concat(data.result.total_count, "\u6761");
+    },
+    showQuickJumper: true
+  };
+};
+
+exports.pagination = pagination;

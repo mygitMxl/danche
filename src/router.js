@@ -16,6 +16,9 @@ import Tabs from './page/ul/tabs'
 //登录组件
 import FormLogin from './page/form/login'
 import FormRegister from './page/form/register'
+//表格组件
+import BasicTable from './page/table/basicTable'
+import HighTable from './page/table/highTable'
 export default class router extends Component {
   render() {
     return (
@@ -41,6 +44,9 @@ export default class router extends Component {
                         <Route path="/form/login" component={FormLogin} />
                         <Route path="/form/reg" component={FormRegister} />
                         {/* ......................................................... */}
+                        {/* 表格组件 */}
+                        <Route path="/table/basic" component={BasicTable} />
+                        <Route path="/table/high" component={HighTable} />
                         <Route component={ NoMatch}></Route>
                     </Switch>
                     <Redirect to={'/home'}/>

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 //import { Link } from 'react-router-dom'
 //import axios  from '../../axios' //文件里面有index的情况不需要引index
-import formateDate from '../../util/utils'/* 处理事件的函数 */
+import {formateDate} from '../../util/utils'/* 处理事件的函数 */
 import './index.css'
 export default class index extends Component {
   state={
