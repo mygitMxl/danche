@@ -19,6 +19,8 @@ import FormRegister from './page/form/register'
 //表格组件
 import BasicTable from './page/table/basicTable'
 import HighTable from './page/table/highTable'
+//city组件
+import City from './page/city/index'
 export default class router extends Component {
   render() {
     return (
@@ -47,6 +49,8 @@ export default class router extends Component {
                         {/* 表格组件 */}
                         <Route path="/table/basic" component={BasicTable} />
                         <Route path="/table/high" component={HighTable} />
+                        {/*.......  */}
+                        <Route path="/city" component={City} />
                         <Route component={ NoMatch}></Route>
                     </Switch>
                     <Redirect to={'/home'}/>

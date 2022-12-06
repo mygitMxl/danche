@@ -4,8 +4,8 @@ import axios from 'axios';
 export default class highTable extends Component {
     state={
         // dataSource:[],
-        dataSource2:[],
-        loading:true,
+        // dataSource2:[],
+        // loading:true,
         // selectedRowKeys:[],
         // selectedItem:[],
         // selectedRows:[],

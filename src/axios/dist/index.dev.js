@@ -33,7 +33,7 @@ function () {
         (0, _jsonp["default"])(options.url, {
           param: 'callback'
         }, function (err, response) {
-          if (response.status == 'success') {
+          if (response.status === 'success') {
             resolve(response);
           } else {
             reject(response.messsage);
@@ -51,7 +51,7 @@ function () {
         loading.style.display = 'block';
       }
 
-      var baseApi = 'https://www.easy-mock.com/mock/5a7278e28d0c633b9c4adbd7/api';
+      var baseApi = 'https://www.fastmock.site/mock/0d3e0fa5f65bb4cb711295a72e204c65/mockapi';
       return new Promise(function (resolve, reject) {
         (0, _axios["default"])({
           url: options.url,
@@ -65,10 +65,10 @@ function () {
             loading.style.display = 'none';
           }
 
-          if (response.status == '200') {
+          if (response.status === '200') {
             var res = response.data;
 
-            if (res.code == '0') {
+            if (res.code === '0') {
               resolve(res);
             } else {
               _antd.Modal.info({

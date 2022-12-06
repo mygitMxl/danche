@@ -39,10 +39,10 @@ class Register extends Component {
         const formItemLayout = {/* 栅格系统 */
             labelCol: {
                 xs: { span: 24 },//	<576px
-                sm: { span: 5 },//	≥576px,左边占5
+                sm: { span: 5 },//	≥576px, labelCol表单左边占5
             },
             wrapperCol: {
-                xs: { span: 20 },
+                xs: { span: 20 },// wrapperCol表单右边占的
                 sm: { span: 16 },
             },
         };

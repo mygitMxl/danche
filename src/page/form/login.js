@@ -75,4 +75,4 @@ const FormItem = Form.Item;
     )
   }
 } 
-export default Form.create()(login );/* 这里要创建表单在可以使用 */
+export default Form.create()(login);/* 这里要创建表单在可以使用 */

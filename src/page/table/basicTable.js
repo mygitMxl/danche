@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Card, Table, Modal, Button, message,} from 'antd';
-//import pagination from '../../util/utils'
+import {pagination} from '../../util/utils'
 import axios from 'axios';
 export default class basicTable extends Component {
   state={
