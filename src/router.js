@@ -28,6 +28,8 @@ import Common from './common'
 import OrderDetail from './page/order/detail'
 //user
 import User from './page/user/index';
+//车辆地图
+import BikeMap from './page/map/bikeMap'
 
 export default class router extends Component {
   render() {
@@ -69,7 +71,8 @@ export default class router extends Component {
                         <Route path="/order" component={Order} />
                         {/*.......user */}
                         <Route path='/user' component={User}/>
-
+                         {/*......车辆地图  */}
+                         <Route path='/bikeMap' component={BikeMap} />
 
 
 

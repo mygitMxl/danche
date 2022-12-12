@@ -34,6 +34,8 @@ const Option = Select.Option
                    )}
                </FormItem>
                formItemList.push(end_time)
+
+
                }else if(item.type==='INPUT'){
                 const INPUT=<FormItem label={lable} key={field}>
                   {getFieldDecorator([field],{
@@ -42,6 +44,8 @@ const Option = Select.Option
                   <Input type={'text'} placeholder={placeholder}></Input>
                 </FormItem>
                 formItemList.push(INPUT)
+
+
                }else if(item.type==='SELECT'){
                 const SELECT=<FormItem label={lable} key={field}>
                  {getFieldDecorator([field],{
@@ -54,6 +58,8 @@ const Option = Select.Option
                  }
                 </FormItem>
                 formItemList.push(SELECT)
+
+
                }else if(item.type==='CHECKBOX'){
                  const CHECKBOX=<FormItem label='lable' key={field}>
                  {getFieldDecorator([field],{
@@ -66,11 +72,25 @@ const Option = Select.Option
                  )}
                  </FormItem>
                   formItemList.push(CHECKBOX)
+
                }else if(item.type==='DATE'){
                 const DATE=<Form.Item label={lable} key={field}>
                  <DatePicker format='YYYY-MM-DD HH:mm:ss' placeholder='选择结束时间' style={{ width: width }}/>
                 </Form.Item>
                  formItemList.push(DATE)
+
+
+               }else if(item.type==='city'){/* city不常用所以没封装 */
+                 const city =<FormItem label='城市' key={item.id}>
+                  {getFieldDecorator('city',{
+                    initialValue:0
+                  })(
+                    <Select  style={{width:80}} placeholder={placeholder} >
+                     {getOptionList([{id:0,name:'北京'},{id:1,name:'杭州'}])}
+                    </Select>
+                  )}
+                 </FormItem>
+                  formItemList.push(city)
                }
             })
         }
