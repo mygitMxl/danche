@@ -38,3 +38,11 @@
   margin-right: 30px;
   vertical-align: middle;
 }
+.simple-page .header-top {
+  background-color: #1890ff;
+  color: #f9c700;
+}
+.simple-page .header-top .commonJpg {
+  width: 50px;
+  margin-right: 20px;
+}

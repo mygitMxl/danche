@@ -1,0 +1,35 @@
+.Wraper {
+  width: 100%;
+  padding: 0 19.5px;
+}
+.Wraper .detail-items {
+  margin-left: 90px;
+  padding: 25px 50px 25px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.Wraper .detail-items:last-child {
+  border-bottom: none;
+}
+.Wraper .detail-items .item-title {
+  margin: 20px 0;
+  font-size: 20px;
+  color: #bebebe;
+}
+.Wraper .detail-items .detail-form li {
+  margin: 0 0;
+  padding: 0 0;
+  list-style: none;
+  margin-bottom: 10px;
+}
+.Wraper .detail-items .detail-form-left {
+  float: left;
+  text-align: right;
+  color: #999;
+}
+.Wraper .detail-items .detail-form-content {
+  padding-left: 100px;
+}
+.Wraper .order-map {
+  height: 450px;
+  margin: 25px -24px 0;
+}

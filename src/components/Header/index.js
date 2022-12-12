@@ -32,28 +32,37 @@ export default class index extends Component {
       let sysTime=formateDate(new Date().getTime())
       this.setState({sysTime})
     }, 1000);
-
+     let{menuType}=this.props
     return (
       <div className="header">
         <Row className="header-top">
-          <Col span='24'>
+        {
+          menuType?<Col span='6'>
+          <img src="/assets/bike.jpg" alt="" className='commonJpg'/>
+           <span>IMooc 通用管理系统</span>
+          </Col>:''//common 来判断menuType有咩有值,有值渲染common的header没有为空
+        }
+          <Col span={menuType?18:24} >{/* 这里也用到了 menuType*/}
           <span>{userName}</span>
-           <a href='/'>退出</a>
+           <a href='/' style={{color:"orange"}}>退出</a>
           </Col>
         </Row>
-        <Row className='breadcrum'>
-          <Col span='4' className='breadcrumb-title'>
-            首页
-          </Col>
-          <Col span='20' className='weather'>
-            <span className='date'>{sysTime}</span>
-            <span className='weather-detail'>
-             <span className='weather-detail'>
-               {weather}
-             </span>
-            </span>
-          </Col>
-        </Row>
+        {menuType?'':/* common组件传过来的属性 */
+            <Row className='breadcrum'>
+            <Col span='4' className='breadcrumb-title'>
+              首页
+            </Col>
+            <Col span='20' className='weather'>
+              <span className='date'>{sysTime}</span>
+              <span className='weather-detail'>
+               <span className='weather-detail'>
+                 {weather}
+               </span>
+              </span>
+            </Col>
+         </Row>
+        }
+       
       </div>
     )
   }

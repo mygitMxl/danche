@@ -21,12 +21,24 @@ import BasicTable from './page/table/basicTable'
 import HighTable from './page/table/highTable'
 //city组件
 import City from './page/city/index'
+//order组件
+import Order from './page/order/index'
+//common组件
+import Common from './common'
+import OrderDetail from './page/order/detail'
+
 export default class router extends Component {
   render() {
     return (
           <HashRouter>
             <Switch>
             <Route path={'/login'} component={Login}/>
+          <Route path="/common" render={() =>
+            <Common>
+              <Route path="/common/order/detail/:orderId" component={OrderDetail} />
+            </Common>
+          }
+          />
             <Route path={'/'} render={()=>{
                 return(
                     <Admin>
@@ -49,14 +61,17 @@ export default class router extends Component {
                         {/* 表格组件 */}
                         <Route path="/table/basic" component={BasicTable} />
                         <Route path="/table/high" component={HighTable} />
-                        {/*.......  */}
+                        {/*.......city  */}
                         <Route path="/city" component={City} />
+                        {/*........order */}
+                        <Route path="/order" component={Order} />
                         <Route component={ NoMatch}></Route>
                     </Switch>
                     <Redirect to={'/home'}/>
                    </Admin>
                 )
             }}></Route>
+          
           </Switch>
           </HashRouter>
     )

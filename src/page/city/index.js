@@ -1,8 +1,8 @@
 import { Button, Card,Form,Select, Table,Modal,message } from 'antd';
-import FormItem from 'antd/lib/form/FormItem'
 import React, { Component } from 'react'
 import {formateDate} from '../../util/utils'
 import axios from 'axios';
+const FormItem = Form.Item;
 const Option = Select.Option;
 export default class index extends Component {
     state={

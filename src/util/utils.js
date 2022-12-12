@@ -1,3 +1,6 @@
+import { Select } from 'antd'
+import React from 'react';
+const Option = Select.Option;
 export  const formateDate=(time)=>{
     if(!time)return '';
     let date = new Date(time);
@@ -28,3 +31,17 @@ export const pagination=(data,callback)=>{
         showQuickJumper:true
     }
 }
+//form
+export const getOptionList=(data)=>{
+   if(!data){
+    return []
+   }
+   let options=[]
+   data.map(item=>
+    options.push(<Option value={item.id} key={item.id}>{item.name}</Option>)
+    )
+   return options
+}
+  //table
+  // selectedRowKeys的封装
+
