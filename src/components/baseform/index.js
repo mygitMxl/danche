@@ -66,6 +66,11 @@ const Option = Select.Option
                  )}
                  </FormItem>
                   formItemList.push(CHECKBOX)
+               }else if(item.type==='DATE'){
+                const DATE=<Form.Item label={lable} key={field}>
+                 <DatePicker format='YYYY-MM-DD HH:mm:ss' placeholder='选择结束时间' style={{ width: width }}/>
+                </Form.Item>
+                 formItemList.push(DATE)
                }
             })
         }
@@ -73,8 +78,8 @@ const Option = Select.Option
     }
     //查询表单
     handleFilterSubmit=()=>{
-  let fieldsValue = this.props.form.getFieldsValue();//获取表单里的值
-  this.props.filterSubmit(fieldsValue);//调用父组件传来的函数,并把值传过去
+    let fieldsValue = this.props.form.getFieldsValue();//获取表单里的值
+    this.props.filterSubmit(fieldsValue);//调用父组件传来的函数,并把值传过去
     }
     //重置
     reset=()=>{

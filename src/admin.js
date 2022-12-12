@@ -3,7 +3,6 @@ import Header from './components/Header'/* 如果文件中有index会默认导�
 import  Footer  from './components/Footer'
 import React, { Component } from 'react'
 import NavLeft from './components/Navleft'
-
 import './style/common.css'
 export default class admin extends Component {
   render() {

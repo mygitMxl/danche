@@ -26,6 +26,8 @@ import Order from './page/order/index'
 //common组件
 import Common from './common'
 import OrderDetail from './page/order/detail'
+//user
+import User from './page/user/index';
 
 export default class router extends Component {
   render() {
@@ -65,7 +67,25 @@ export default class router extends Component {
                         <Route path="/city" component={City} />
                         {/*........order */}
                         <Route path="/order" component={Order} />
+                        {/*.......user */}
+                        <Route path='/user' component={User}/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         <Route component={ NoMatch}></Route>
+                   
+                       
                     </Switch>
                     <Redirect to={'/home'}/>
                    </Admin>
