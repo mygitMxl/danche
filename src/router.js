@@ -30,7 +30,12 @@ import OrderDetail from './page/order/detail'
 import User from './page/user/index';
 //车辆地图
 import BikeMap from './page/map/bikeMap'
-
+//echarts
+import Bar from './page/echarts/bar';
+import Pie from './page/echarts/pie';
+import Line from './page/echarts/line';
+//富文本
+import Rich from './page/rich';
 export default class router extends Component {
   render() {
     return (
@@ -73,8 +78,12 @@ export default class router extends Component {
                         <Route path='/user' component={User}/>
                          {/*......车辆地图  */}
                          <Route path='/bikeMap' component={BikeMap} />
-
-
+                         {/* echarts */}
+                         <Route path='/charts/bar' component={Bar} />
+                         <Route path='/charts/pie' component={Pie} />
+                         <Route path='/charts/line' component={Line} />
+                         {/* 富文本 */}
+                         <Route path='/rich' component={Rich} />
 
 
 
