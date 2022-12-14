@@ -36,6 +36,8 @@ import Pie from './page/echarts/pie';
 import Line from './page/echarts/line';
 //富文本
 import Rich from './page/rich';
+//权限管理
+import Permission from './page/permission';
 export default class router extends Component {
   render() {
     return (
@@ -84,9 +86,8 @@ export default class router extends Component {
                          <Route path='/charts/line' component={Line} />
                          {/* 富文本 */}
                          <Route path='/rich' component={Rich} />
-
-
-
+                         {/* 权限管理 */}
+                         <Route path='/permission' component={Permission}/>
 
 
 

@@ -247,7 +247,7 @@ formList = [
         selectedIds={this.state.selectedIds}
         selectedItem={this.state.selectedItem}
         pagination={{pageSize:5}}//页码
-        rowSelection='checkbox'
+        
         
         />
        </Card>
