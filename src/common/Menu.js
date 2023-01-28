@@ -33,7 +33,7 @@ const { Sider } = Layout;
   /* 。。。。。。。。。。。。 */
   /* 路由跳转，和转发action */
   const go=(item)=>{
-  props.history.push(`/${item.key}`)
+  props.history.push(item.key)
   props.setTitle(item.title)
   }
   return (

@@ -3,8 +3,9 @@
   import React, { useState } from 'react';
   import Menu from './Menu';
   import Header from './Header';
+  import Context from '../router/context';
   const {Content} = Layout;
-export default function NewSandBox() {
+export default function NewSandBox(props) {
     // Nprogress.start()
     // useEffect(() => {
     //     Nprogress.done()
@@ -22,7 +23,8 @@ export default function NewSandBox() {
             minHeight: 280,
           }}
         >
-          Content
+           {/* {props.children} */}
+          <Context/>
         </Content>
       </Layout>
     </Layout>
