@@ -16,7 +16,7 @@ export default function MyHeader() {
             className: 'trigger',
             onClick: () => setcollapsed(!collapsed),
           })}
-          123
+          12
         </Header>
   )
 }
