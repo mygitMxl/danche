@@ -1,0 +1,18 @@
+.sanjiao {
+  position: fixed;
+  top: 109px;
+  left: 247px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid #ffffff;
+  border-right: 14px solid transparent;
+  border-bottom: 14px solid  transparent;
+  border-left: 14px solid  transparent;
+}
+.title {
+  position: fixed;
+  top: 56px;
+  left: 246px;
+  font-size: 17px;
+  font-weight: 700;
+}

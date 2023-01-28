@@ -6,9 +6,12 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import SubMenu from 'antd/lib/menu/SubMenu';
-import { Link, withRouter } from 'react-router-dom';
+import {withRouter } from 'react-router-dom';
 import './style/logo.css'
+import * as type from '@/redux/action/action'
+import { connect } from 'react-redux';
 const { Sider } = Layout;
+
  function MYMenu(props) {
     const renderMenu=(menuList)=>{
        return menuList.map(item=>{
@@ -20,13 +23,19 @@ const { Sider } = Layout;
           )
         }
          return <Menu.Item title={item.title} key={item.key}>
-            <Link to={item.key}>{item.title}</Link>
+            <div onClick={()=>{go(item)}}>{item.title}</div>
          </Menu.Item>
        })
     }
   const selectKeys=[props.location.pathname]
   const defaultOpenKeys=['/'+props.location.pathname.split('/')[1]]
-  console.log(props);
+  
+  /* 。。。。。。。。。。。。 */
+  /* 路由跳转，和转发action */
+  const go=(item)=>{
+  props.history.push(`/${item.key}`)
+  props.setTitle(item.title)
+  }
   return (
       <Sider trigger={null} collapsible>
          <div style={{ display: "flex", height: "100%", "flexDirection": "column" }}> 
@@ -40,4 +49,4 @@ const { Sider } = Layout;
       </Sider>
   )
 }
-export default withRouter(MYMenu)
+export default connect(null,type)(withRouter(MYMenu))

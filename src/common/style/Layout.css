@@ -15,6 +15,7 @@
 }
 .site-layout .site-layout-background {
   background: #fafafa;
+  height: 110px;
 }
 #root,
 .ant-layout {
