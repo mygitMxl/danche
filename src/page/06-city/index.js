@@ -85,7 +85,7 @@ export default function Index() {
       field:'city',
       width:'100px',
       placeholder:"全部",
-      initialValue:'全部',
+      initialValue:'1',
       list:[{id:'1',name:'全部'},{id:"2",name:'北京'},{id:"3",name:'天津'},{id:"4",name:'上海'}]
 
     },
@@ -95,7 +95,7 @@ export default function Index() {
       field:'UsecarOne',
       width:'100px',
       placeholder:"全部",
-      initialValue:'全部',
+      initialValue:'1',
       list:[{id:'1',name:'全部'},{id:'2',name:'指定停车点模式'},{id:'3',name:'禁停区模式'}]
 
     },
@@ -105,7 +105,7 @@ export default function Index() {
       field:'jingying',
       width:'100px',
       placeholder:"全部",
-      initialValue:'全部',
+      initialValue:'1',
       list:[{id:'1',name:'全部'},{id:'2',name:'自营'},{id:'3',name:'加盟'}]
     },
     {
@@ -113,7 +113,7 @@ export default function Index() {
       field:'jingyingStatus',
       placeholder:"全部",
       label:'加盟商授权状态',
-      initialValue:'全部',
+      initialValue:'1',
       width:'100px',
       list:[{id:'1',name:'全部'},{id:'2',name:'已授权'},{id:'3',name:'未授权'}]
       }

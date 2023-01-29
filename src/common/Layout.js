@@ -24,8 +24,8 @@ export default function NewSandBox(props) {
             overflow:'auto'
           }}
         >
-           {/* {props.children} */}
           <Context/>
+          {/* {props.children} */}
         </Content>
       </Layout>
     </Layout>

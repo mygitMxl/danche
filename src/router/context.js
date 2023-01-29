@@ -10,12 +10,12 @@ import { connect } from 'react-redux'
   console.log(props);
   return (
     <div>
-      <Spin size='large' spinning={props.showLaing}>
-        <Switch>
+       <Spin size='large' spinning={props.showLaing}>
+       <Switch>
        <Route  path={'/home'} component={Home}/>
        <Route  path={'/city'} component={City}/>
-       <Route path={'/order'} component={Order}/>
-        </Switch>
+       <Route path={'/Order'} component={Order}/>
+       </Switch>
       </Spin>
     </div>
   )
