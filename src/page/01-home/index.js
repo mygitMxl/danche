@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
-export default function index() {
+export default function Index() {
+   const addFrom=useRef()
   return (
-    <div>home</div>
+    <div>
+      <div ref={addFrom} onClick={()=>{console.log(addFrom.current);}}>123</div>
+    </div>
   )
 }
