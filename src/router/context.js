@@ -4,6 +4,7 @@ import { Redirect, Route,Switch } from 'react-router-dom'
 import Home from '../page/01-home'
 import City from '@/page/06-city'
 import Order from '@/page/07-order'
+import User from '@/page/08-user'
 import { Spin } from 'antd'
 import { connect } from 'react-redux'
  function Context(props) {
@@ -14,7 +15,8 @@ import { connect } from 'react-redux'
        <Switch>
        <Route  path={'/home'} component={Home}/>
        <Route  path={'/city'} component={City}/>
-       <Route path={'/Order'} component={Order}/>
+       <Route path={'/order'} component={Order}/>
+       <Route path={'/user'} component={User}/>
        </Switch>
       </Spin>
     </div>

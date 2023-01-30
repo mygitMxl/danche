@@ -106,6 +106,7 @@ export default function Index(props) {
     {
       type:'时间查询',
       width:'100px',
+      field:'1'
     },
     {
       type:'SELECT',

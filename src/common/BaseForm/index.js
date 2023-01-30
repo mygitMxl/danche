@@ -10,11 +10,11 @@ export default function Index({formList,setValue}) {
         formList.forEach(item=>{
         let{label, field, placeholder, initialValue, width, type, list}=item
         if(type==='时间查询'){
-           let startTime= <FormItem label='订单时间' name={'start_time'}>
+           let startTime= <FormItem label='订单时间' name={'start_time'} key={field+1}>
              <DatePicker format='YYYY-MM-DD HH:mm:ss' placeholder='选择开始时间' style={{ width: width }}/>
             </FormItem>
            NewDate.push(startTime)
-           let endTime=<FormItem label='~' name={'end_time'}>
+           let endTime=<FormItem label='~' name={'end_time'}  key={field+2}>
              <DatePicker format='YYYY-MM-DD HH:mm:ss' placeholder='选择结束时间' style={{ width: width }}/>
            </FormItem>
             NewDate.push(endTime)
@@ -39,7 +39,7 @@ export default function Index({formList,setValue}) {
           </Form.Item>
         NewDate.push(CHECKBOX)
         }else if(type==='DATE'){
-            const DATE = <Form.Item label={label} key={field} name='日期'>
+            const DATE = <Form.Item label={label} key={field} name='date'>
             <DatePicker format='YYYY-MM-DD HH:mm:ss' placeholder='选择结束时间' style={{ width: width }}/>
           </Form.Item>
           NewDate.push(DATE)
