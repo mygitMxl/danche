@@ -5,6 +5,7 @@ import Home from '../page/01-home'
 import City from '@/page/06-city'
 import Order from '@/page/07-order'
 import User from '@/page/08-user'
+import Bike from '@/page/09-bikeMap'
 import { Spin } from 'antd'
 import { connect } from 'react-redux'
  function Context(props) {
@@ -17,6 +18,7 @@ import { connect } from 'react-redux'
        <Route  path={'/city'} component={City}/>
        <Route path={'/order'} component={Order}/>
        <Route path={'/user'} component={User}/>
+       <Route path={'/bikeMap'} component={Bike}/>
        </Switch>
       </Spin>
     </div>
